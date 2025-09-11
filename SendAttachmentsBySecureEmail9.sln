@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendAttachmentsBySecureEmail9.WebApiLand", "SendAttachmentsBySecureEmail9.WebApiLand\SendAttachmentsBySecureEmail9.WebApiLand.csproj", "{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendAttachmentsBySecureEmail9.Data", "SendAttachmentsBySecureEmail9.Data\SendAttachmentsBySecureEmail9.Data.csproj", "{FEC2C631-6630-48FD-804F-88F810954AAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC2C631-6630-48FD-804F-88F810954AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC2C631-6630-48FD-804F-88F810954AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC2C631-6630-48FD-804F-88F810954AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC2C631-6630-48FD-804F-88F810954AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88568B39-7653-448B-A1B6-0CBCC51299A7}
+	EndGlobalSection
+EndGlobal
