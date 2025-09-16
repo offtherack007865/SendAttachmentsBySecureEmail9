@@ -56,6 +56,23 @@ builder.Services.AddDbContextPool<SimplifyVbcAdt8Context>(options => options.Use
 builder.Services.AddControllers()
     .AddNewtonsoftJson();
 
+//List<string> attachmentList = new List<string>();
+//attachmentList.Add("c:\test.txt");
+//EmailSpecifications myEmailSpecifications =
+//    new EmailSpecifications
+//    (
+//        "pwmorrison@summithealthcare.com"
+//        , "smgapplications@summithealthcare.com"
+//        , "pwmorrison@summithealthcare.com"
+//        , "Test Subject"
+//        , MyConstants.BodyType.PlainText
+//        , "Test Body"
+//        , attachmentList
+//    );
+//string json =
+//    Newtonsoft.Json.JsonConvert.SerializeObject(myEmailSpecifications);
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
