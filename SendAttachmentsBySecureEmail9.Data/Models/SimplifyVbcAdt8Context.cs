@@ -25,8 +25,14 @@ public partial class SimplifyVbcAdt8Context : DbContext
 
     public virtual DbSet<HumanaCensusAdtMaster> HumanaCensusAdtMasters { get; set; }
     public virtual DbSet<qy_GetSendAttachmentsBySecureEmailConfigOutputColumns> qy_GetSendAttachmentsBySecureEmailConfigOutputColumnsList { get; set; }
+    public virtual DbSet<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns> qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns>(entity =>
+        {
+            entity.HasNoKey();
+        });
+
         modelBuilder.Entity<qy_GetSendAttachmentsBySecureEmailConfigOutputColumns>(entity =>
         {
             entity.HasNoKey();

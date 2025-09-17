@@ -76,5 +76,71 @@ namespace SendAttachmentsBySecureEmail9.WebApiLand.Controllers
 
             return returnOutput;
         }
+
+
+
+
+
+
+
+
+
+
+
+        // GET /api/Ops/qy_GetSendAttachmentsBySecureEmailAttachmentsConfig
+        [HttpGet]
+        public qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfig
+                    (
+                    )
+        {
+            qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput
+                returnOutput =
+                    new qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput();
+
+
+            string sql = $"opsemail.qy_GetSendAttachmentsBySecureEmailAttachmentsConfig";
+
+            List<SqlParameter> parms = new List<SqlParameter>();
+
+            try
+            {
+                returnOutput.qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList =
+                    MyContext
+                    .qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList
+                    .FromSqlRaw<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns>
+                    (
+                          sql
+                        , parms.ToArray()
+                    )
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                returnOutput.IsOk = false;
+
+                string myErrorMessage = ex.Message;
+                if (ex.InnerException != null)
+                {
+                    myErrorMessage = $"{myErrorMessage}.  InnerException:  {ex.InnerException.Message}";
+                }
+                returnOutput.ErrorMessage = myErrorMessage;
+                return returnOutput;
+            }
+
+            return returnOutput;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

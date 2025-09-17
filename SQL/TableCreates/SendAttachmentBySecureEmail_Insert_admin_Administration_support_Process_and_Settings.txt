@@ -11,7 +11,7 @@ DECLARE @MyApplicationID [int] = 0;
 -- If Application ID exists, delete both the Process ID and its associated Settings.
 SELECT @MyApplicationID = [ApplicationID]
   FROM [admin].[Application]
-  WHERE [ApplicationName] = 'SendAttachmentsBySecureEmail';
+  WHERE [ApplicationName] = 'OpsEmail';
   
 IF (@MyApplicationID IS NULL OR @MyApplicationID = 0) BEGIN
   print ('Insert Application');
@@ -29,8 +29,8 @@ IF (@MyApplicationID IS NULL OR @MyApplicationID = 0) BEGIN
            ,[UpdatedBy]
            ,[UpdatedDate])
      VALUES
-           ('SendAttachmentsBySecureEmail'
-           ,'SendAttachmentsBySecureEmail'
+           ('OpsEmail'
+           ,'OpsEmail'
            ,0
            ,null
            ,null
@@ -44,7 +44,7 @@ IF (@MyApplicationID IS NULL OR @MyApplicationID = 0) BEGIN
 		   
 SELECT @MyApplicationID = [ApplicationID]
   FROM [admin].[Application]
-  WHERE [ApplicationName] = 'SendAttachmentsBySecureEmail';
+  WHERE [ApplicationName] = 'OpsEmail';
 		   
 END
 
@@ -53,7 +53,7 @@ DECLARE @MyProcessID [int] = 0;
 -- If Process ID exists, delete both the Process ID and its associated Settings.
 SELECT @MyProcessID = [ProcessID]
   FROM [support].[Process]
-  WHERE [Name] = 'WebApi'
+  WHERE [Name] = 'SendAttachmentsBySecureEmail'
     AND [ApplicationID] = @MyApplicationID;  
   
 IF (@MyProcessID IS NOT NULL) BEGIN
@@ -80,9 +80,9 @@ INSERT INTO [support].[Process]
            ,[Active])
      VALUES
            (@MyApplicationID
-           ,'WebApi'
+           ,'SendAttachmentsBySecureEmail'
            ,'Reporting' 
-           ,'WebApi'
+           ,'SendAttachmentsBySecureEmail'
            ,0
            ,NULL
            ,1
@@ -94,7 +94,7 @@ INSERT INTO [support].[Process]
 SET @MyProcessID = NULL;
 SELECT @MyProcessID = [ProcessID]
   FROM [support].[Process]
-  WHERE [Name] = 'WebApi'
+  WHERE [Name] = 'SendAttachmentsBySecureEmail'
     AND [ApplicationID] = @MyApplicationID;  
 IF (@MyProcessID IS NULL) BEGIN
   print 'Process ID not there.'

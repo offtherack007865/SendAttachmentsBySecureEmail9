@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendAttachmentsBySecureEmai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendAttachmentsBySecureEmail9.TestConsoleApp", "SendAttachmentsBySecureEmail9.TestConsoleApp\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj", "{FD35F58E-31F0-4366-8665-B291CB88E497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendAttachmentsBySecureEmail9.CallWebApiLand", "SendAttachmentsBySecureEmail9.CallWebApiLand\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj", "{9BD81DCE-839A-490E-8C48-097B91F84945}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FD35F58E-31F0-4366-8665-B291CB88E497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD35F58E-31F0-4366-8665-B291CB88E497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD35F58E-31F0-4366-8665-B291CB88E497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD81DCE-839A-490E-8C48-097B91F84945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD81DCE-839A-490E-8C48-097B91F84945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD81DCE-839A-490E-8C48-097B91F84945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD81DCE-839A-490E-8C48-097B91F84945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
