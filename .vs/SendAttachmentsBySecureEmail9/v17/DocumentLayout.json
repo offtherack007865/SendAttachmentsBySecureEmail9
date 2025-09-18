@@ -3,24 +3,84 @@
   "WorkspaceRootPath": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\emailspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\emailspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\sendattachmentsmainops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\sendattachmentsmainops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\sendattachmentbysecureemail9.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\sendattachmentbysecureemail9.consoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|solutionrelative:sendattachmentsbysecureemail9.testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\sendattachmentbysecureemail9.consoleapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\sendattachmentbysecureemail9.consoleapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentbysecureemail9.consoleapp\\readinsendattachmentsconfigoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63A706F0-676D-4D35-9CB9-1A5490618AD8}|SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj|solutionrelative:sendattachmentbysecureemail9.consoleapp\\readinsendattachmentsconfigoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\sendattachmentsmainopsoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\sendattachmentsmainopsoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailconfigoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailconfigoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\sendattachmentsconfigoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\sendattachmentsconfigoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\myconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\myconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\sendattachmentsbysecureemail9.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\sendattachmentsbysecureemail9.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\controllers\\opscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\controllers\\opscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9BD81DCE-839A-490E-8C48-097B91F84945}|SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.callwebapiland\\sendattachmentsbysecureemail9.callwebapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\sendattachmentsbysecureemail9.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\sendattachmentsbysecureemail9.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailattachmentsconfigoutputcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,14 +103,6 @@
       "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailattachmentsconfigoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|solutionrelative:sendattachmentsbysecureemail9.testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.testconsoleapp\\sendattachmentsbysecureemail9.testconsoleapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FD35F58E-31F0-4366-8665-B291CB88E497}|SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj|solutionrelative:sendattachmentsbysecureemail9.testconsoleapp\\sendattachmentsbysecureemail9.testconsoleapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -63,32 +115,16 @@
       "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\sendattachmentsbysecureemailoutputcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\emailspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\emailspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{CF0366D6-0EC9-4901-ADB1-F23BCF5A0733}|SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj|solutionrelative:sendattachmentsbysecureemail9.webapiland\\sendattachmentsbysecureemail9.webapiland.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\myconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\myconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\sendattachmentsbysecureemailoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\sendattachmentsbysecureemailoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailconfigoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|solutionrelative:sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailconfigoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEC2C631-6630-48FD-804F-88F810954AAC}|SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj|d:\\source\\repos\\sendattachmentsbysecureemail9\\sendattachmentsbysecureemail9.data\\models\\qy_getsendattachmentsbysecureemailconfigoutputcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,31 +146,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 36,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SendAttachmentsBySecureEmail9.CallWebApiLand",
-              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "RelativeToolTip": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "DocumentIndex": 7,
+              "Title": "SendAttachmentBySecureEmail9.ConsoleApp",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-17T21:12:23.665Z",
+              "WhenOpened": "2025-09-18T19:42:52.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SendAttachmentsBySecureEmail9.CallWebApiLand",
-              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
-              "RelativeToolTip": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "DocumentIndex": 3,
+              "Title": "SendAttachmentsMainOps.cs",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA9wAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:21:17.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SendAttachmentsMainOpsOutput.cs",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsMainOpsOutput.cs",
+              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsMainOpsOutput.cs",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsMainOpsOutput.cs",
+              "RelativeToolTip": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsMainOpsOutput.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:17:07.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SendAttachmentsConfigOptions.cs",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsConfigOptions.cs",
+              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsConfigOptions.cs",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsConfigOptions.cs",
+              "RelativeToolTip": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsConfigOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:11:46.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReadInSendAttachmentsConfigOptions.cs",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\ReadInSendAttachmentsConfigOptions.cs",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\ReadInSendAttachmentsConfigOptions.cs",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\ReadInSendAttachmentsConfigOptions.cs",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\ReadInSendAttachmentsConfigOptions.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wAIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:07:53.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\appsettings.json",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\appsettings.json",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\appsettings.json",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-18T19:03:35.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "log4net.config",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\log4net.config",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\log4net.config",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\log4net.config",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\log4net.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-18T18:56:31.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SendAttachmentBySecureEmail9.ConsoleApp",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-17T21:00:53.72Z",
+              "WhenOpened": "2025-09-18T18:55:02.249Z",
               "EditorCaption": ""
             },
             {
@@ -167,20 +281,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\Program.cs",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\Program.cs",
+              "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T17:27:42.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SendAttachmentsBySecureEmail9.CallWebApiLand",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "RelativeToolTip": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-17T21:12:23.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "RelativeToolTip": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-17T21:00:53.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "SendAttachmentsBySecureEmail9.CallWebApiLand.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.cs",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.CallWebApiLand\\SendAttachmentsBySecureEmail9.CallWebApiLand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwDsAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T21:00:40.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\Properties\\launchSettings.json",
@@ -193,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput.cs",
@@ -206,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns.cs",
@@ -219,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "SendAttachmentsBySecureEmail9.TestConsoleApp",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
@@ -231,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
@@ -244,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "log4net.config",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\log4net.config",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.TestConsoleApp\\log4net.config",
@@ -257,33 +409,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.TestConsoleApp\\Program.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\Program.cs",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.TestConsoleApp\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwLgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T19:40:34.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
               "Title": "EmailSpecifications.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\EmailSpecifications.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\EmailSpecifications.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\EmailSpecifications.cs",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.Data\\Models\\EmailSpecifications.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAIBJwBIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T19:17:33.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "SendAttachmentsBySecureEmailOutput.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsBySecureEmailOutput.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsBySecureEmailOutput.cs",
@@ -296,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "SendAttachmentsBySecureEmailOutputColumns.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsBySecureEmailOutputColumns.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\SendAttachmentsBySecureEmailOutputColumns.cs",
@@ -309,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 11,
               "Title": "qy_GetSendAttachmentsBySecureEmailConfigOutput.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailConfigOutput.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailConfigOutput.cs",
@@ -322,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "qy_GetSendAttachmentsBySecureEmailConfigOutputColumns.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailConfigOutputColumns.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\qy_GetSendAttachmentsBySecureEmailConfigOutputColumns.cs",
@@ -335,20 +487,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "OpsController.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\Controllers\\OpsController.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\Controllers\\OpsController.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\Controllers\\OpsController.cs",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.WebApiLand\\Controllers\\OpsController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAUwCMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T20:08:13.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "SendAttachmentsBySecureEmail9.Data",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj",
@@ -360,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "SendAttachmentsBySecureEmail9.Data.csproj",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\SendAttachmentsBySecureEmail9.Data.csproj",
@@ -373,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "SimplifyVbcAdt8Context.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\Models\\SimplifyVbcAdt8Context.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\Models\\SimplifyVbcAdt8Context.cs",
@@ -386,33 +538,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "MyConstants.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\MyConstants.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.Data\\MyConstants.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.Data\\MyConstants.cs",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.Data\\MyConstants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T19:24:23.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "SendAttachmentsBySecureEmail9.WebApiLand.csproj",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-09-11T18:13:50.035Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\Program.cs",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\Program.cs",
@@ -425,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "SendAttachmentsBySecureEmail9.WebApiLand",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\SendAttachmentsBySecureEmail9.WebApiLand.csproj",
@@ -437,20 +589,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "log4net.config",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\log4net.config",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\log4net.config",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\log4net.config",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.WebApiLand\\log4net.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-09-11T18:16:14.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.WebApiLand\\appsettings.json",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.WebApiLand\\appsettings.json",

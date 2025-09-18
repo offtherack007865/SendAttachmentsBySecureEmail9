@@ -17,6 +17,55 @@ namespace SendAttachmentsBySecureEmail9.CallWebApiLand
         }
         public string MySimplifyVbcAdt8BaseWebApiUrl { get; set; }
 
+        // GET /api/Ops/ /api/Ops/qy_GetSendAttachmentsBySecureEmailConfig
+        public qy_GetSendAttachmentsBySecureEmailConfigOutput qy_GetSendAttachmentsBySecureEmailConfig()
+        {
+            qy_GetSendAttachmentsBySecureEmailConfigOutput
+                returnOutput =
+                    qy_GetSendAttachmentsBySecureEmailConfigAsync().Result;
+
+            return returnOutput;
+        }
+        public async Task<qy_GetSendAttachmentsBySecureEmailConfigOutput> qy_GetSendAttachmentsBySecureEmailConfigAsync()
+        {
+            log.Info($"In qy_GetSendAttachmentsBySecureEmailConfigAsync()");
+            qy_GetSendAttachmentsBySecureEmailConfigOutput
+                returnOutput =
+                    new qy_GetSendAttachmentsBySecureEmailConfigOutput();
+
+            string myCompleteUrl = $"{MySimplifyVbcAdt8BaseWebApiUrl}/api/Ops/qy_GetSendAttachmentsBySecureEmailConfig";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var result = await client.GetAsync(myCompleteUrl);
+                    var response = await result.Content.ReadAsStringAsync();
+                    returnOutput = JsonConvert.DeserializeObject<qy_GetSendAttachmentsBySecureEmailConfigOutput>(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                returnOutput.IsOk = false;
+                string myErrorMessage = ex.Message;
+                if (ex.InnerException != null)
+                {
+                    myErrorMessage = $"{myErrorMessage}.  Inner Exception:  {ex.InnerException.Message}";
+                }
+                return returnOutput;
+            }
+
+            if (returnOutput == null ||
+                returnOutput.qy_GetSendAttachmentsBySecureEmailConfigOutputColumnsList.Count == 0)
+            {
+                returnOutput = new qy_GetSendAttachmentsBySecureEmailConfigOutput();
+                returnOutput.IsOk = false;
+                returnOutput.ErrorMessage = $"Url {myCompleteUrl} returned an error.";
+                return returnOutput;
+            }
+
+            return returnOutput;
+        }
+
         // GET /api/Ops/qy_GetSendAttachmentsBySecureEmailAttachmentsConfig
         public qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput qy_GetSendAttachmentsBySecureEmailAttachmentsConfig()
         {
