@@ -95,6 +95,26 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                 return;
             }
 
+            // Get Attachment Systems from the database.
+            CallWebApiLandClass
+                myCallForGetAttachmentSystems =
+                    new CallWebApiLandClass
+                        (
+                            myConfigOptions.ConfigOptionsBaseWebUrl
+                        );
+
+            qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput
+                myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput =
+                    myCallForGetAttachmentSystems.qy_GetSendAttachmentsBySecureEmailAttachmentsConfig();
+
+            if (!myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput.IsOk ||
+                myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput
+                .qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList
+                .Count != 1)
+            {
+                log.Error($"We had an error in trying to get the configuration file from the database:  {myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput.ErrorMessage}");
+                return;
+            }
 
             // Main Operations.
             SendAttachmentsMainOps
@@ -103,7 +123,9 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                         (
                             myConfigOptions
                             , myqy_GetSendAttachmentsBySecureEmailConfigOutput
-                            .qy_GetSendAttachmentsBySecureEmailConfigOutputColumnsList[0]
+                                .qy_GetSendAttachmentsBySecureEmailConfigOutputColumnsList[0]
+                            , myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutput
+                                .qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList
                         );
 
             SendAttachmentsMainOpsOutput

@@ -12,6 +12,7 @@ using System.Runtime.InteropServices.JavaScript;
 using System.Xml.Linq;
 using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
 
@@ -24,24 +25,201 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                 (
                     SendAttachmentsConfigOptions inputSendAttachmentsConfigOptions
                     ,qy_GetSendAttachmentsBySecureEmailConfigOutputColumns inputqy_GetSendAttachmentsBySecureEmailConfigOutputColumns
+                    , List<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns> inputqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList
                 )
         {
             MySendAttachmentsConfigOptions =
                 inputSendAttachmentsConfigOptions;
             Myqy_GetSendAttachmentsBySecureEmailConfigOutputColumns =
                 inputqy_GetSendAttachmentsBySecureEmailConfigOutputColumns;
+            Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList =
+                inputqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList;
         }
 
-        public qy_GetSendAttachmentsBySecureEmailConfigOutputColumns Myqy_GetSendAttachmentsBySecureEmailConfigOutputColumns { get; set; }
+        // File Configuration Options
         public SendAttachmentsConfigOptions MySendAttachmentsConfigOptions { get; set; }
+
+        // Application Configuration (from database) Options
+        public qy_GetSendAttachmentsBySecureEmailConfigOutputColumns Myqy_GetSendAttachmentsBySecureEmailConfigOutputColumns { get; set; }
+
+        // Attachment System Configuration (from database) Options
+        public List<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns> Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList { get; set; }
 
         public SendAttachmentsMainOpsOutput DoIt()
         {
             SendAttachmentsMainOpsOutput returnOutput =
                 new SendAttachmentsMainOpsOutput();
+            foreach (qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns loopSystem in Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList)
+            {
+                List<string>
+                    myListOfAttachmentFullFilenames 
+                        = Directory.GetFiles(loopSystem.AttachmentReadFolder, $"*.*").ToList();
+                if (myListOfAttachmentFullFilenames.Count > 0)
+                {
+                    
+                }
+            }
+            return returnOutput;
+        }
+        public 
+            ProcessAttachmentsSystemOutput 
+                ProcessAttachmentsSystem
+                (
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+                        inputSystem
+                    , List<string>
+                        inputListOfAttachmentFullFilenames
+                )
+        {
+            ProcessAttachmentsSystemOutput 
+                returnOutput =
+                    new ProcessAttachmentsSystemOutput();
+
+            string myFromAddress = string.Empty;
+            string myToAddressListString = string.Empty;
+            string mySubject = string.Empty;
+            string myBodyLineListString = string.Empty;
+            BodyType myBodyType = BodyType.HTML;
+            if (inputSystem.EmailFormatPlainTextOrHtml.ToUpper().CompareTo("PLAINTEXT") == 0)
+            {
+                myBodyType = BodyType.PlainText;
+            }
+
+            // From Address
+            myFromAddress =
+                Myqy_GetSendAttachmentsBySecureEmailConfigOutputColumns
+                .FromEmailAddress;
+
+            // To Address List String
+            myToAddressListString =
+                inputSystem
+                .EmailToAddresses;
+
+            // Subject
+            mySubject =
+                BuildSubject
+                (
+                    inputSystem
+                );
+
+            // BodyLineList
+            myBodyLineListString =
+                BuildBodyLineListString
+                (
+                    inputSystem
+                    , myBodyType
+                    , inputListOfAttachmentFullFilenames
+                );
+
+            SendEmailViaOutlook
+                                (
+                        string sFromAddress
+                        , string sToAddress
+                        , string sSubject
+                        , string sBody
+                        , BodyType bodyType
+                        , List<string> arrAttachments
+                     )
+            return returnOutput;
+        }
+        public 
+            string 
+                BuildSubject
+                (
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns inputSystem
+                )
+        {
+            string returnOutput = string.Empty;
+            returnOutput = inputSystem.EmailSubject;
+            if (!returnOutput.ToUpper().Contains("SECURE"))
+            {
+                returnOutput = $"[SECURE] {returnOutput}";
+            }
             return returnOutput;
         }
 
+        public string 
+                BuildBodyLineListString
+                (
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+                        inputSystem
+                    , BodyType inputBodyType
+                    , List<string> 
+                        inputListOfAttachmentFullFilenames
+                )
+        {
+            string returnOutput = string.Empty;
+            string startOfBody =
+                inputSystem
+                .EmailBodyStart;
+            string
+                attachmentListPortionOfString =
+                    BuildEmailBodyAttachmentList
+                    (
+                        inputSystem
+                        , inputBodyType
+                        , inputListOfAttachmentFullFilenames
+                    );
+            string endOfBody =
+                inputSystem
+                .EmailBodyEnd;
+            switch (inputBodyType)
+            {
+                case BodyType.HTML:
+                    break;
+                case BodyType.PlainText:
+                    break;
+
+            }
+
+            return returnOutput;
+        }
+        public 
+            string 
+                BuildEmailBodyAttachmentList
+                (
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
+                        inputSystem
+                    , BodyType 
+                        inputBodyType
+                    , List<string>
+                        inputListOfAttachmentFullFilenames
+                )
+        {
+            List<FileInfo>
+                myFileInfoList = 
+                    new List<FileInfo>();
+            foreach(string loopString in inputListOfAttachmentFullFilenames)
+            {
+                FileInfo loopFi = new FileInfo( loopString );
+                myFileInfoList.Add(loopFi);
+            }
+
+            string returnOutput = string.Empty;
+            switch(inputBodyType)
+            {
+                case BodyType.HTML:
+                    returnOutput = "<br><br>Please see the attachments listed below.<br><br><ol>";
+                    foreach (FileInfo loopFi in myFileInfoList)
+                    {
+                        returnOutput = $"{returnOutput}<li>{loopFi.Name}</li>";
+                    }
+                    returnOutput = $"{returnOutput}</ol><br><br>";
+                    break;
+                case BodyType.PlainText:
+                    int attachmentCtr = 1;
+                    returnOutput = $"\r\n\r\nPlease see the attachments listed below.\r\n\r\n";
+                    foreach (FileInfo loopFi in myFileInfoList)
+                    {
+                        returnOutput = $"{returnOutput}{attachmentCtr.ToString()}.  {loopFi.Name}\r\n";
+                        attachmentCtr++;
+                    }
+                    returnOutput = $"{returnOutput}\r\n\r\n";
+                    break;
+
+            }
+            return returnOutput;
+        }
         public enum BodyType
         {
             PlainText,
@@ -49,7 +227,7 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             HTML
         }
 
-        public static bool sendEmailViaOutlook(string sFromAddress, string sToAddress, string sSubject, string sBody, BodyType bodyType, List<string> arrAttachments)
+        public static bool SendEmailViaOutlook(string sFromAddress, string sToAddress, string sSubject, string sBody, BodyType bodyType, List<string> arrAttachments)
         {
             //Send email via Office Outlook 2010
             //'sFromAddress' = email address sending from (ex: "me@somewhere.com") -- this account must exist in Outlook. Only one email address is allowed!
