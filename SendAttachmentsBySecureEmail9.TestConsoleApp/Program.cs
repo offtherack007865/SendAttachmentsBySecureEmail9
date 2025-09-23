@@ -13,7 +13,6 @@ using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
-using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
 
@@ -99,7 +98,6 @@ namespace ExtractEmailAttachmentViaOutlook9.ConsoleApp
 
             try
             {
-                //Get Outlook COM objects
                 Outlook.Application app = new Outlook.Application();
                 Outlook.MailItem newMail = (Outlook.MailItem)app.CreateItem(Outlook.OlItemType.olMailItem);
 

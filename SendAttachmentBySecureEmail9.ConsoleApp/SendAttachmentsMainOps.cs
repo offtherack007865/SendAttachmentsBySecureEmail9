@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.JavaScript;
 using System.Xml.Linq;
-using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -49,14 +48,19 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
         {
             SendAttachmentsMainOpsOutput returnOutput =
                 new SendAttachmentsMainOpsOutput();
-            foreach (qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns loopSystem in Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList)
+            foreach (qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+                        loopSystem in Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList)
             {
                 List<string>
                     myListOfAttachmentFullFilenames 
                         = Directory.GetFiles(loopSystem.AttachmentReadFolder, $"*.*").ToList();
                 if (myListOfAttachmentFullFilenames.Count > 0)
                 {
-                    
+                    ProcessAttachmentsSystem
+                    (
+                        loopSystem
+                        , myListOfAttachmentFullFilenames
+                    );
                 }
             }
             return returnOutput;
@@ -111,15 +115,16 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                     , inputListOfAttachmentFullFilenames
                 );
 
+            // Send the email
             SendEmailViaOutlook
-                                (
-                        string sFromAddress
-                        , string sToAddress
-                        , string sSubject
-                        , string sBody
-                        , BodyType bodyType
-                        , List<string> arrAttachments
-                     )
+            (
+                myFromAddress
+                , myToAddressListString
+                , mySubject
+                , myBodyLineListString
+                , myBodyType
+                , inputListOfAttachmentFullFilenames
+            );
             return returnOutput;
         }
         public 
@@ -131,7 +136,7 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
         {
             string returnOutput = string.Empty;
             returnOutput = inputSystem.EmailSubject;
-            if (!returnOutput.ToUpper().Contains("SECURE"))
+            if (!returnOutput.ToUpper().StartsWith("[SECURE]"))
             {
                 returnOutput = $"[SECURE] {returnOutput}";
             }
@@ -163,15 +168,8 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             string endOfBody =
                 inputSystem
                 .EmailBodyEnd;
-            switch (inputBodyType)
-            {
-                case BodyType.HTML:
-                    break;
-                case BodyType.PlainText:
-                    break;
-
-            }
-
+            returnOutput = $"{inputSystem.EmailBodyStart}{attachmentListPortionOfString}{inputSystem.EmailBodyEnd}";
+            
             return returnOutput;
         }
         public 
