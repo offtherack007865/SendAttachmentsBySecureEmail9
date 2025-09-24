@@ -59,15 +59,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SendAttachmentBySecureEmail9.ConsoleApp",
+              "Title": "SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentBySecureEmail9.ConsoleApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-23T19:22:57.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T19:22:57.139Z"
             },
             {
               "$type": "Document",
@@ -77,7 +76,7 @@
               "RelativeDocumentMoniker": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
               "RelativeToolTip": "SendAttachmentBySecureEmail9.ConsoleApp\\SendAttachmentsMainOps.cs",
-              "ViewState": "AgIAADABAAAAAAAAAAAwwDIBAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAALgAAAAAAAAAAAAwwNEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-23T19:18:21.1Z",
               "EditorCaption": ""
@@ -85,15 +84,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SendAttachmentsBySecureEmail9.TestConsoleApp",
+              "Title": "SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "DocumentMoniker": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "RelativeDocumentMoniker": "SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "ToolTip": "D:\\source\\repos\\SendAttachmentsBySecureEmail9\\SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.TestConsoleApp\\SendAttachmentsBySecureEmail9.TestConsoleApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-23T19:14:14.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T19:14:14.298Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "SendAttachmentsBySecureEmail9.TestConsoleApp\\Program.cs",
               "ViewState": "AgIAAJMAAAAAAAAAAAAwwLYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T19:01:49.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T19:01:49.872Z"
             }
           ]
         }

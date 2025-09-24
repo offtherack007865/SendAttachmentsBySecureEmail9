@@ -1,0 +1,135 @@
+-- SQL Service Instance:  smg-sql01
+IF (@@SERVERNAME <> 'smg-sql01')
+BEGIN
+PRINT 'Invalid SQL Server Connection'
+RETURN
+END
+
+USE [Administration];
+
+
+DECLARE @MyApplicationID [int] = 0;
+
+-- If Application ID exists, delete both the Process ID and its associated Settings.
+SELECT @MyApplicationID = [ApplicationID]
+  FROM [admin].[Application]
+  WHERE [ApplicationName] = 'OpsEmail';
+  
+IF (@MyApplicationID IS NULL OR @MyApplicationID = 0) BEGIN
+  print ('Insert Application');
+  INSERT INTO [admin].[Application]
+           ([ApplicationName]
+           ,[Description]
+           ,[NotificationOnError]
+           ,[NotificationGroupID]
+           ,[Notes]
+           ,[Visible]
+           ,[ListOrder]
+           ,[Active]
+           ,[InsertedBy]
+           ,[InsertedDate]
+           ,[UpdatedBy]
+           ,[UpdatedDate])
+     VALUES
+           ('OpsEmail'
+           ,'OpsEmail'
+           ,0
+           ,null
+           ,null
+           ,1
+           ,550
+           ,1
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+		   
+SELECT @MyApplicationID = [ApplicationID]
+  FROM [admin].[Application]
+  WHERE [ApplicationName] = 'OpsEmail';
+		   
+END
+
+DECLARE @MyProcessID [int] = 0;
+
+-- If Process ID exists, delete both the Process ID and its associated Settings.
+SELECT @MyProcessID = [ProcessID]
+  FROM [support].[Process]
+  WHERE [Name] = 'SendAttachmentsBySecureEmail'
+    AND [ApplicationID] = @MyApplicationID;  
+  
+IF (@MyProcessID IS NOT NULL) BEGIN
+  DELETE [support].[Setting]
+   WHERE [ApplicationID] = @MyApplicationID
+     AND [ProcessID] = @MyProcessID;
+	 
+  DELETE [support].[Process]
+   WHERE [ApplicationID] = @MyApplicationID
+     AND [ProcessID] = @MyProcessID;
+	 
+END
+  
+-- Insert Process 
+INSERT INTO [support].[Process]
+           ([ApplicationID]
+           ,[Name]
+           ,[Type]
+           ,[Description]
+           ,[NotificationOnError]
+           ,[NotificationGroupID]
+           ,[Visible]
+           ,[ListOrder]
+           ,[Active])
+     VALUES
+           (@MyApplicationID
+           ,'SendAttachmentsBySecureEmail'
+           ,'Reporting' 
+           ,'SendAttachmentsBySecureEmail'
+           ,0
+           ,NULL
+           ,1
+           ,0 
+           ,1);		   
+  print 'Set process'
+
+-- Find newly inserted process ID
+SET @MyProcessID = NULL;
+SELECT @MyProcessID = [ProcessID]
+  FROM [support].[Process]
+  WHERE [Name] = 'SendAttachmentsBySecureEmail'
+    AND [ApplicationID] = @MyApplicationID;  
+IF (@MyProcessID IS NULL) BEGIN
+  print 'Process ID not there.'
+  RETURN;
+END 
+
+print 'ApplicationId = ' + convert([nvarchar] (20), @MyApplicationID)
+print 'ProcessId = ' + convert([nvarchar] (20), @MyProcessID)
+
+/*	
+    [FromEmailAddress]
+*/
+--BEGIN TRAN
+
+INSERT INTO [support].[Setting]
+
+           ([ApplicationID]
+            ,[ProcessID]
+            ,[Name]
+            ,[Type]
+            ,[Description]
+            ,[Value]
+            ,[Active])
+
+VALUES (@MyApplicationID
+           ,@MyProcessID
+           ,'FromEmailAddress'
+           ,'Default'
+           ,''
+           ,'smgapplications@summithealthcare.com'
+           ,1);
+
+
+-- COMMIT TRAN
+
+-- ROLLBACK

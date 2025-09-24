@@ -197,22 +197,22 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             switch(inputBodyType)
             {
                 case BodyType.HTML:
-                    returnOutput = "<br><br>Please see the attachments listed below.<br><br><ol>";
+                    returnOutput = $"{returnOutput}<br><br><ol>";
                     foreach (FileInfo loopFi in myFileInfoList)
                     {
                         returnOutput = $"{returnOutput}<li>{loopFi.Name}</li>";
                     }
-                    returnOutput = $"{returnOutput}</ol><br><br>";
+                    returnOutput = $"{returnOutput}</ol><br>";
                     break;
                 case BodyType.PlainText:
                     int attachmentCtr = 1;
-                    returnOutput = $"\r\n\r\nPlease see the attachments listed below.\r\n\r\n";
+                    returnOutput = $"{returnOutput}\r\n\r\n";
                     foreach (FileInfo loopFi in myFileInfoList)
                     {
-                        returnOutput = $"{returnOutput}{attachmentCtr.ToString()}.  {loopFi.Name}\r\n";
+                        returnOutput = $"{returnOutput}{attachmentCtr.ToString()}. {loopFi.Name}\r\n";
                         attachmentCtr++;
                     }
-                    returnOutput = $"{returnOutput}\r\n\r\n";
+                    returnOutput = $"{returnOutput}\r\n";
                     break;
 
             }
