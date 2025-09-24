@@ -45,7 +45,7 @@ INSERT INTO [dbo].[SimpleFileMover8_Config]
 -- ROLLBACK TRAN
 
 DECLARE @SimpleFileMover8_ConfigID [bigint] = 0;
-SELECT @SimpleFileMover8_ConfigID = [SimpleFileMover8_ConfigID]
+SELECT @SimpleFileMover8_ConfigID = [Pk]
 FROM [dbo].[SimpleFileMover8_Config]
 WHERE [SystemName] = 'Talkiatry';
 
