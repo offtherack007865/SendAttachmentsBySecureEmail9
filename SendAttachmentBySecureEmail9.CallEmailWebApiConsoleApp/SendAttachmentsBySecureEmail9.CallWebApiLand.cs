@@ -1,6 +1,7 @@
-﻿using log4net;
+﻿using EmailWebApiLand9.CallEmailWebApiLand;
+using EmailWebApiLand9.Data.Models;
+using log4net;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Office.Interop.Outlook;
 using SendAttachmentsBySecureEmail9.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -12,19 +13,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Outlook = Microsoft.Office.Interop.Outlook;
 
 
 
-namespace SendAttachmentBySecureEmail9.ConsoleApp
+namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
 {
     public class SendAttachmentsMainOps
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(SendAttachmentsMainOps));
-        public  SendAttachmentsMainOps
+        public SendAttachmentsMainOps
                 (
                     SendAttachmentsConfigOptions inputSendAttachmentsConfigOptions
-                    ,qy_GetSendAttachmentsBySecureEmailConfigOutputColumns inputqy_GetSendAttachmentsBySecureEmailConfigOutputColumns
+                    , qy_GetSendAttachmentsBySecureEmailConfigOutputColumns inputqy_GetSendAttachmentsBySecureEmailConfigOutputColumns
                     , List<qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns> inputqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList
                 )
         {
@@ -49,11 +49,11 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
         {
             SendAttachmentsMainOpsOutput returnOutput =
                 new SendAttachmentsMainOpsOutput();
-            foreach (qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+            foreach (qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
                         loopSystem in Myqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumnsList)
             {
                 List<string>
-                    myListOfAttachmentFullFilenames 
+                    myListOfAttachmentFullFilenames
                         = Directory.GetFiles(loopSystem.AttachmentReadFolder, $"*.*").ToList();
                 log.Debug($"myListOfAttachmentFullFilenames.Count = {myListOfAttachmentFullFilenames.Count.ToString()}");
                 if (myListOfAttachmentFullFilenames.Count > 0)
@@ -67,17 +67,17 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             }
             return returnOutput;
         }
-        public 
-            ProcessAttachmentsSystemOutput 
+        public
+            ProcessAttachmentsSystemOutput
                 ProcessAttachmentsSystem
                 (
-                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
                         inputSystem
                     , List<string>
                         inputListOfAttachmentFullFilenames
                 )
         {
-            ProcessAttachmentsSystemOutput 
+            ProcessAttachmentsSystemOutput
                 returnOutput =
                     new ProcessAttachmentsSystemOutput();
 
@@ -105,6 +105,21 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
 
             log.Debug($"Before email send, myToAddressListString = {myToAddressListString}");
 
+            string[]
+                myToAddressArray =
+                    myToAddressListString.Split(";");
+
+            List<string>
+                myToAddressList =
+                    new List<string>();
+            foreach (string loopToEmailAddress in myToAddressArray)
+            {
+                if (loopToEmailAddress.Trim().Length > 0)
+                {
+                    myToAddressList.Add(loopToEmailAddress);
+                }
+            }
+
             // Subject
             mySubject =
                 BuildSubject
@@ -125,16 +140,28 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
 
             log.Debug($"Before email send, myBodyLineListString = {myBodyLineListString}");
 
-            // Send the email
-            SendEmailViaOutlook
-            (
-                myFromAddress
-                , myToAddressListString
-                , mySubject
-                , myBodyLineListString
-                , myBodyType
-                , inputListOfAttachmentFullFilenames
-            );
+
+            // Email the notifyees.
+            CallEmailWebApiLand myCallEmailWebApi =
+                new CallEmailWebApiLand
+                (
+                    mySubject // string inputEemailSubject
+                    , myBodyLineListString // string inputEmailBodyLineListString
+                    , myToAddressList // List<string> inputEmailAddressList
+                    , inputSystem.EmailFromAddress // string inputFromEmailAddress
+                    , inputSystem.EmailWebApiUrl // string inputEmailWebApiBaseUrl
+                    , inputListOfAttachmentFullFilenames //List<string> inputAttachmentList
+                );
+            EmailSendWithHtmlStringOutput
+                myEmailSendWithHtmlStringOutput =
+                    myCallEmailWebApi.CallIHtmlStringBody();
+            if (!myEmailSendWithHtmlStringOutput.IsOk)
+            {
+                log.Error($"Error upon trying to invoke the Email Web Api.  Error Message:  {myEmailSendWithHtmlStringOutput}");
+                returnOutput.IsOk = false;
+                returnOutput.ErrorMessage = myEmailSendWithHtmlStringOutput.ErrorMessage;
+                return returnOutput;
+            }
 
             // Delete Attachment Files for System.
             DeleteAttachmentFilesOutput
@@ -153,8 +180,8 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             }
             return returnOutput;
         }
-        public 
-            string 
+        public
+            string
                 BuildSubject
                 (
                     qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns inputSystem
@@ -169,13 +196,13 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             return returnOutput;
         }
 
-        public string 
+        public string
                 BuildBodyLineListString
                 (
-                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns 
+                    qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
                         inputSystem
                     , BodyType inputBodyType
-                    , List<string> 
+                    , List<string>
                         inputListOfAttachmentFullFilenames
                 )
         {
@@ -195,32 +222,32 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                 inputSystem
                 .EmailBodyEnd;
             returnOutput = $"{inputSystem.EmailBodyStart}{attachmentListPortionOfString}{inputSystem.EmailBodyEnd}";
-            
+
             return returnOutput;
         }
-        public 
-            string 
+        public
+            string
                 BuildEmailBodyAttachmentList
                 (
                     qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
                         inputSystem
-                    , BodyType 
+                    , BodyType
                         inputBodyType
                     , List<string>
                         inputListOfAttachmentFullFilenames
                 )
         {
             List<FileInfo>
-                myFileInfoList = 
+                myFileInfoList =
                     new List<FileInfo>();
-            foreach(string loopString in inputListOfAttachmentFullFilenames)
+            foreach (string loopString in inputListOfAttachmentFullFilenames)
             {
-                FileInfo loopFi = new FileInfo( loopString );
+                FileInfo loopFi = new FileInfo(loopString);
                 myFileInfoList.Add(loopFi);
             }
 
             string returnOutput = string.Empty;
-            switch(inputBodyType)
+            switch (inputBodyType)
             {
                 case BodyType.HTML:
                     returnOutput = $"{returnOutput}<br><br><ol>";
@@ -250,142 +277,7 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             RTF,
             HTML
         }
-
-        public static bool SendEmailViaOutlook(string sFromAddress, string sToAddress, string sSubject, string sBody, BodyType bodyType, List<string> arrAttachments)
-        {
-            //Send email via Office Outlook 2010
-            //'sFromAddress' = email address sending from (ex: "me@somewhere.com") -- this account must exist in Outlook. Only one email address is allowed!
-            //'sToAddress' = email address sending to. Can be multiple. In that case separate with semicolons or commas. (ex: "recipient@gmail.com", or "recipient1@gmail.com; recipient2@gmail.com")
-            //'sCc' = email address sending to as Carbon Copy option. Can be multiple. In that case separate with semicolons or commas. (ex: "recipient@gmail.com", or "recipient1@gmail.com; recipient2@gmail.com")
-            //'sSubject' = email subject as plain text
-            //'sBody' = email body. Type of data depends on 'bodyType'
-            //'bodyType' = type of text in 'sBody': plain text, HTML or RTF
-            //'arrAttachments' = if not null, must be a list of absolute file paths to attach to the email
-            //'sBcc' = single email address to use as a Blind Carbon Copy, or null not to use
-            //RETURN:
-            //      = true if success
-            bool bRes = false;
-            log.Debug($"SendEmailViaOutlook sFromAddress = {sFromAddress}");
-            try
-            {
-                //Get Outlook COM objects
-                Outlook.Application app = new Outlook.Application();
-                Outlook.NameSpace mapiNameSpace = app.GetNamespace("MAPI");
-                mapiNameSpace.Logon("", "", Missing.Value, Missing.Value);
-
-                log.Debug($"SendEmailViaOutlook b4 itialization of email.");
-                Outlook.MailItem newMail = (Outlook.MailItem)app.CreateItem(Outlook.OlItemType.olMailItem);
-                log.Debug($"SendEmailViaOutlook after itialization of email.");
-
-                sToAddress = "pwmorrison@summithealthcare.com";
-
-                //Parse 'sToAddress'
-                log.Debug($"before sToaddress = {sToAddress}");
-
-
-                if (!string.IsNullOrWhiteSpace(sToAddress))
-                {
-                    string[] arrAddTos = sToAddress.Split(new char[] { ';', ',' });
-                    foreach (string strAddr in arrAddTos)
-                    {
-                        if (!string.IsNullOrWhiteSpace(strAddr) &&
-                            strAddr.IndexOf('@') != -1)
-                        {
-                            newMail.Recipients.Add(strAddr.Trim());
-                        }
-                        else
-                            throw new System.Exception("Bad to-address: " + sToAddress);
-                    }
-                }
-                else
-                    throw new System.Exception("Must specify to-address");
-
-
-                //Set type of message
-                log.Debug($"before sBody = {sBody.ToString()}");
-
-                switch (bodyType)
-                {
-                    case BodyType.HTML:
-                        newMail.HTMLBody = sBody;
-                        break;
-                    case BodyType.RTF:
-                        newMail.RTFBody = sBody;
-                        break;
-                    case BodyType.PlainText:
-                        newMail.Body = sBody;
-                        break;
-                    default:
-                        throw new System.Exception("Bad email body type: " + bodyType);
-                }
-
-
-                if (arrAttachments != null)
-                {
-                    //Add attachments
-                    foreach (string strPath in arrAttachments)
-                    {
-                        log.Debug($"before formatting attachments, strPath {strPath}");
-
-                        if (File.Exists(strPath))
-                        {
-                            newMail.Attachments.Add(strPath);
-                        }
-                        else
-                            throw new System.Exception("Attachment file is not found: \"" + strPath + "\"");
-                    }
-                }
-
-                //Add subject
-                log.Debug($"before sSubject {sSubject}");
-
-                if (!string.IsNullOrWhiteSpace(sSubject))
-                    newMail.Subject = sSubject;
-
-                log.Debug($"before seeing if acc is extract@summithealthcare.com");
-
-                Outlook.Accounts accounts = app.Session.Accounts;
-                Outlook.Account acc = null;
-
-                //Look for our account in the Outlook
-                foreach (Outlook.Account account in accounts)
-                {
-                    log.Debug($"account.DisplayName = {account.DisplayName}");
-                    if (account.DisplayName.CompareTo(sFromAddress) == 0)
-                    {
-                        //Use it
-                        acc = account;
-                        break;
-                    }
-                }
-
-                //Did we get the account
-                if (acc != null)
-                {
-                    log.Debug($"Sending Email !!!!!");
-
-                    //Use this account to send the e-mail. 
-                    newMail.SendUsingAccount = acc;
-
-                    //And send it
-                    ((Outlook._MailItem)newMail).Send();
-
-                    //Done
-                    bRes = true;
-                }
-                else
-                {
-                    throw new System.Exception("Account does not exist in Outlook: " + sFromAddress);
-                }
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine("ERROR: Failed to send mail: " + ex.Message);
-            }
-
-            return bRes;
-        }
-        public DeleteAttachmentFilesOutput 
+        public DeleteAttachmentFilesOutput
             DeleteAttachmentFiles
             (
                 List<string> inputAttachmentFullFilenameList
@@ -394,7 +286,7 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
             )
         {
             DeleteAttachmentFilesOutput returnOutput = new DeleteAttachmentFilesOutput();
-            foreach(string loopAttachmentFilename in inputAttachmentFullFilenameList)
+            foreach (string loopAttachmentFilename in inputAttachmentFullFilenameList)
             {
                 FileInfo fi = new FileInfo(loopAttachmentFilename);
 
@@ -403,7 +295,7 @@ namespace SendAttachmentBySecureEmail9.ConsoleApp
                     (
                         inputqy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns
                             .AttachmentInputArchiveFolder
-                        ,fi.Name
+                        , fi.Name
                     );
                 if (File.Exists(archiveFullFilename))
                 {

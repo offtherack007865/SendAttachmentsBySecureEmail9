@@ -73,6 +73,7 @@ BEGIN TRY
         ,[EmailFormatPlainTextOrHtml]
         ,[EmailBodyStart]
         ,[EmailBodyEnd]
+        ,[EmailWebApiUrl]
       FROM [EmailWebApi7].[dbo].[SendAttachmentsBySecureEmailAttachmentsConfig]
       WHERE [Enabled] = 1;	
       

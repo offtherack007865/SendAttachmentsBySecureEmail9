@@ -35,11 +35,14 @@ CREATE TABLE [dbo].[SendAttachmentsBySecureEmailAttachmentsConfig](
     ,[SystemName] [nvarchar] (255) NOT NULL
 	,[AttachmentReadFolder] [nvarchar] (500) NOT NULL  
     ,[AttachmentInputArchiveFolder] [nvarchar] (500) NOT NULL  
-	,[EmailToAddresses] [nvarchar] (500) NOT NULL  
+	,[EmailFromAddress] [nvarchar] (500) NOT NULL  
+    ,[EmailToAddresses]  [nvarchar] (500) NOT NULL      
     ,[EmailSubject] [nvarchar] (255) NOT NULL
     ,[EmailFormatPlainTextOrHtml] [nvarchar] (30) NOT NULL
     ,[EmailBodyStart] [nvarchar] (255) NOT NULL 
     ,[EmailBodyEnd] [nvarchar] (255) NOT NULL 
+    ,[EmailWebApiUrl] [nvarchar] (255) NOT NULL 
+    
 CONSTRAINT [pk_dboSendAttachmentsBySecureEmailAttachmentsConfig] PRIMARY KEY CLUSTERED 
 (
 	[SendAttachmentsBySecureEmailAttachmentsConfigID] ASC
@@ -50,30 +53,38 @@ CONSTRAINT [pk_dboSendAttachmentsBySecureEmailAttachmentsConfig] PRIMARY KEY CLU
 SELECT 1;
 -- 1 record 
 
--- BEGIN TRAN
+BEGIN TRANSACTION;
+
 INSERT INTO [dbo].[SendAttachmentsBySecureEmailAttachmentsConfig]
            ([Enabled]
            ,[SystemName]
            ,[AttachmentReadFolder]
            ,[AttachmentInputArchiveFolder]
+           ,[EmailFromAddress]
            ,[EmailToAddresses]
            ,[EmailSubject]
            ,[EmailFormatPlainTextOrHtml]
            ,[EmailBodyStart]
-           ,[EmailBodyEnd])
+           ,[EmailBodyEnd]
+           ,[EmailWebApiUrl])
      VALUES
            (1
            ,'Talkiatry'
            ,'\\ps-nas\backuptodisk\development\SendAttachmentsBySecureEmail_Attachments\Talkiatry'
            ,'\\ps-nas\backuptodisk\development\SendAttachmentsBySecureEmail_Attachments\Talkiatry\InputArchive'
+           ,'smgapplications@summithealthcare.com'
            ,'pwmorrison@summithealthcare.com'
-           ,'Summit Healthcare Talkiatry document(s)'
+           ,'[Secure] Summit Healthcare Talkiatry document(s)'
            ,'Html'
            ,'Please review the following Summit Healthcare Talkiatry document(s) attached:'
-           ,'Thanks.<br>Philip Morrison<br>Summit Healthcare<br>IT BI Development');
+           ,'Thanks.<br>Philip Morrison<br>Summit Healthcare<br>IT BI Development'
+           ,'http://webservices:8081/api/EmailWebApi/SendEmailWithHtmlStringInput');
 
--- COMMIT TRAN
--- ROLLBACK TRAN
-
-
-
+IF @@ERROR > 0 BEGIN
+  SELECT 0;
+  ROLLBACK TRANSACTION;
+END
+ELSE BEGIN
+  SELECT 1;
+  COMMIT TRANSACTION;
+END

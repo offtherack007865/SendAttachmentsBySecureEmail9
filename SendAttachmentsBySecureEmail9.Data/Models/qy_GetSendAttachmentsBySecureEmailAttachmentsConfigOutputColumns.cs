@@ -12,10 +12,12 @@ namespace SendAttachmentsBySecureEmail9.Data.Models
         public string SystemName { get; set; }
         public string AttachmentReadFolder { get; set; }
         public string AttachmentInputArchiveFolder { get; set; }
+        public string EmailFromAddress { get; set; }
         public string EmailToAddresses { get; set; }
         public string EmailSubject { get; set; }
         public string EmailFormatPlainTextOrHtml { get; set; }
         public string EmailBodyStart { get; set; }
         public string EmailBodyEnd { get; set; }
+        public string EmailWebApiUrl { get; set; }
     }
 }
