@@ -2,6 +2,7 @@
 using EmailWebApiLand9.Data.Models;
 using log4net;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Query;
 using SendAttachmentsBySecureEmail9.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,7 @@ namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
             {
                 List<string>
                     myListOfAttachmentFullFilenames
-                        = Directory.GetFiles(loopSystem.AttachmentReadFolder, $"*.*").ToList();
+                        = GetBlanklessFullFilenamesForSystem(loopSystem);
                 log.Debug($"myListOfAttachmentFullFilenames.Count = {myListOfAttachmentFullFilenames.Count.ToString()}");
                 if (myListOfAttachmentFullFilenames.Count > 0)
                 {
@@ -67,6 +68,42 @@ namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
             }
             return returnOutput;
         }
+        public List<string> GetBlanklessFullFilenamesForSystem(qy_GetSendAttachmentsBySecureEmailAttachmentsConfigOutputColumns inputSystem)
+        {
+            List<string> 
+                returnOutput =
+                    new List<string>();
+            List<string>
+                myListOfAttachmentFullFilenames
+                    = Directory.GetFiles(inputSystem.AttachmentReadFolder, $"*.*").ToList();
+
+            foreach (string loopFullFilename in myListOfAttachmentFullFilenames)
+            {
+                FileInfo loopFi = new FileInfo(loopFullFilename);
+                if (loopFi.Name.Contains(" "))
+                {
+                    string blanklessFilename = loopFi.Name.Replace(" ", "_");
+                    string blanklessFullFilename =
+                        Path.Combine(loopFi.DirectoryName, blanklessFilename);
+                    if (File.Exists(blanklessFullFilename))
+                    {
+                        File.Delete(blanklessFullFilename);
+                    }
+                    File.Copy(loopFi.FullName, blanklessFullFilename);
+                    if (File.Exists(loopFi.FullName))
+                    {
+                        File.Delete(loopFi.FullName);
+                    }
+                    returnOutput.Add(blanklessFullFilename);
+                }
+                else
+                {
+                    returnOutput.Add(loopFi.FullName);
+                }
+            }
+            return returnOutput;
+        }
+
         public
             ProcessAttachmentsSystemOutput
                 ProcessAttachmentsSystem
@@ -93,8 +130,8 @@ namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
 
             // From Address
             myFromAddress =
-                Myqy_GetSendAttachmentsBySecureEmailConfigOutputColumns
-                .FromEmailAddress;
+                inputSystem
+                .EmailFromAddress;
 
             log.Debug($"Before email send, myFromAddress = {myFromAddress}");
 
@@ -116,7 +153,7 @@ namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
             {
                 if (loopToEmailAddress.Trim().Length > 0)
                 {
-                    myToAddressList.Add(loopToEmailAddress);
+                    myToAddressList.Add(loopToEmailAddress.Trim());
                 }
             }
 

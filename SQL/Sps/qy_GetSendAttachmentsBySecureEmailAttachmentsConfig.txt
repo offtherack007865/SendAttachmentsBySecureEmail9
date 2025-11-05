@@ -68,6 +68,7 @@ BEGIN TRY
         ,[SystemName]
         ,[AttachmentReadFolder]
         ,[AttachmentInputArchiveFolder]
+        ,[EmailFromAddress]
         ,[EmailToAddresses]
         ,[EmailSubject]
         ,[EmailFormatPlainTextOrHtml]

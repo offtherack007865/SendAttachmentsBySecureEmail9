@@ -77,8 +77,8 @@ INSERT INTO [dbo].[SendAttachmentsBySecureEmailAttachmentsConfig]
            ,'[Secure] Summit Healthcare Talkiatry document(s)'
            ,'Html'
            ,'Please review the following Summit Healthcare Talkiatry document(s) attached:'
-           ,'Thanks.<br>Philip Morrison<br>Summit Healthcare<br>IT BI Development'
-           ,'http://webservices:8081/api/EmailWebApi/SendEmailWithHtmlStringInput');
+           ,'Thanks.<br>Philip Morrison<br>Summit Healthcare<br>IT Business Intelligence'
+           ,'http://webservices:8121/api/EmailWebApi/SendEmailWithHtmlStringInput');
 
 IF @@ERROR > 0 BEGIN
   SELECT 0;
