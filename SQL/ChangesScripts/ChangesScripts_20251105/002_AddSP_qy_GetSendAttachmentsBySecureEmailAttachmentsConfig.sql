@@ -1,24 +1,23 @@
 -- SQL Server Instance:  smg-sql01
-IF (@@SERVERNAME <> 'smg-dsdev05')
+IF (@@SERVERNAME <> 'smg-sql01')
 BEGIN
 PRINT 'Invalid SQL Server Connection'
 RETURN
 END
 
 USE [Utilities];
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND OBJECT_ID = OBJECT_ID('opsemail.qy_GetSendAttachmentsBySecureEmailConfig'))
-   DROP PROC [opsemail].[qy_GetSendAttachmentsBySecureEmailConfig]
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND OBJECT_ID = OBJECT_ID('opsemail.qy_GetSendAttachmentsBySecureEmailAttachmentsConfig'))
+   DROP PROC [opsemail].[qy_GetSendAttachmentsBySecureEmailAttachmentsConfig]
 GO
-CREATE PROCEDURE [opsemail].[qy_GetSendAttachmentsBySecureEmailConfig]
+CREATE PROCEDURE [opsemail].[qy_GetSendAttachmentsBySecureEmailAttachmentsConfig]
 /* -----------------------------------------------------------------------------------------------------------
-   Procedure Name  :  qy_GetSendAttachmentsBySecureEmailConfig
+   Procedure Name  :  qy_GetSendAttachmentsBySecureEmailAttachmentsConfig
    Business Analyis:
    Project/Process :   
-   Description     :  Get configuration settings for the 
-                      'Send Attachments By Secure Email' application.
+   Description     :  Get configuration settings for the handling of attachments for different systems.
 	  
    Author          :  Philip Morrison 
-   Create Date     :  9/11/2025
+   Create Date     :  9/17/2025
 
    ***********************************************************************************************************
    **         Change History                                                                                **
@@ -26,22 +25,12 @@ CREATE PROCEDURE [opsemail].[qy_GetSendAttachmentsBySecureEmailConfig]
 
    Date       Version    Author             Description
    --------   --------   -----------        ------------
-   9/11/2025   1.01.001   Philip Morrison    Created
+   9/17/2025   1.01.001   Philip Morrison    Created
 
 */ -----------------------------------------------------------------------------------------------------------                                   
 
 AS
 BEGIN
-
-  -- KeyValueTable
-  DECLARE @KeyValueTable Table
-  (
-    [Name] [nvarchar] (1000)
-	,[Value] [nvarchar] (1000)
-  );
-  
-  DECLARE @FromEmailAddress [nvarchar] (1000) = ''
-  
 -- Template Declarations
 DECLARE @Application            varchar(128) = 'OpsEmail'
 DECLARE @Version                varchar(25)  = '1.00.001'
@@ -66,55 +55,29 @@ BEGIN TRY
     EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  NULL, 'BatchStart', @BatchDescription, @ProcessID, @Process
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-    SET @BatchDetailDescription = '010/030:  Populate KeyValueTable with call to [administration].[qy_GetApplicationSettings]'
+    SET @BatchDetailDescription = '010/010:  Get Enabled entries from SendAttachmentsBySecureEmailAttachmentsConfig'
     EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailStart', @BatchDetailDescription
 	
 	  SELECT @AnticipatedRecordCount = COUNT(*)
-	                                   FROM @KeyValueTable;
+	                                   FROM [EmailWebApi7].[dbo].[SendAttachmentsBySecureEmailAttachmentsConfig]
+                                       WHERE [Enabled] = 1;
 	  
-      -- Populate KeyValueTable with call to [administration].[qy_GetApplicationSettings]
-      INSERT INTO @KeyValueTable
-      (
-        [Name]
-	    ,[Value]
-      )
-      EXEC [Admin].[Utilities].[administration].[qy_GetApplicationSettings] 'OpsEmail', 'Default', 'SendAttachmentsBySecureEmail', NULL, 'AppUser';
-	
-    SET @ActualRecordCount = @@ROWCOUNT
-    EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailEnd', NULL, NULL, NULL, @AnticipatedRecordCount, @ActualRecordCount
-
-----------------------------------------------------------------------------------------------------------------------------------------------------
-/*	
-    [FromEmailAddress]
-*/
-    SET @BatchDetailDescription = '020/030:  Populate @FromEmailAddress'
-    EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailStart', @BatchDetailDescription
-	
-	  SELECT @AnticipatedRecordCount = COUNT(*)
-      FROM @KeyValueTable
-      WHERE [Name] = 'FromEmailAddress';	
-	  
-      -- Populate @FromEmailAddress
-      SELECT @FromEmailAddress = [Value]
-      FROM @KeyValueTable
-      WHERE [Name] = 'FromEmailAddress';	
-	
-    SET @ActualRecordCount = @@ROWCOUNT
-    EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailEnd', NULL, NULL, NULL, @AnticipatedRecordCount, @ActualRecordCount
-
-----------------------------------------------------------------------------------------------------------------------------------------------------
-/*	
-  DECLARE @FromEmailAddress
-*/
-    SET @BatchDetailDescription = '030/030:  Output Settings'
-    EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailStart', @BatchDetailDescription
-	
-	  SET @AnticipatedRecordCount = 1;
-	  
-      -- Output 
+      -- Get Enabled entries from SendAttachmentsBySecureEmailAttachmentsConfig
       SELECT 
-        @FromEmailAddress AS [FromEmailAddress];
-	
+        [Enabled]
+        ,[SystemName]
+        ,[AttachmentReadFolder]
+        ,[AttachmentInputArchiveFolder]
+        ,[EmailFromAddress]
+        ,[EmailToAddresses]
+        ,[EmailSubject]
+        ,[EmailFormatPlainTextOrHtml]
+        ,[EmailBodyStart]
+        ,[EmailBodyEnd]
+        ,[EmailWebApiUrl]
+      FROM [EmailWebApi7].[dbo].[SendAttachmentsBySecureEmailAttachmentsConfig]
+      WHERE [Enabled] = 1;	
+      
     SET @ActualRecordCount = @@ROWCOUNT
     EXEC Admin.Utilities.logs.di_Batch @BatchOutID OUTPUT,  @BatchOutID, 'DetailEnd', NULL, NULL, NULL, @AnticipatedRecordCount, @ActualRecordCount
 ----------------------------------------------------------------------------------------------------------------------------------------------------

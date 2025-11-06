@@ -140,6 +140,9 @@ namespace SendAttachmentBySecureEmail9.CallEmailWebApiConsoleApp
                 inputSystem
                 .EmailToAddresses;
 
+            // pwm 11/6/2025 - Until I get the data change request issued, this is hard-coded.
+            myToAddressListString =
+               "Rachel.Florian@talkiatry.com; rhett.vahos@talkiatry.com; referralops@talkiatry.com; maggie.schell@talkiatry.com; jadunn@summithealthcare.com; hgossett@summithealthcare.com; pwmorrison@summithealthcare.com";
             log.Debug($"Before email send, myToAddressListString = {myToAddressListString}");
 
             string[]
